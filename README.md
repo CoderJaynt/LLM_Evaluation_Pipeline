@@ -19,6 +19,10 @@ The pipeline extracts the relevant messages, computes embeddings, and produces e
 
 A Streamlit-based UI is also included for testing and demonstration.
 
+----------------------------------------------------------------------
+# Live Demo: https://llmevaluationpipeline-8cnhgqzntpsowgumfrbgwe.streamlit.app/
+----------------------------------------------------------------------
+
 ### 1. Project Structure
 <img src="assets/images/folder archi.png" width="700"/>
 
