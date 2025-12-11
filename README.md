@@ -20,19 +20,58 @@ The pipeline extracts the relevant messages, computes embeddings, and produces e
 A Streamlit-based UI is also included for testing and demonstration.
 
 ### 1. Project Structure
-llm-eval/
-│
-├── pipeline.py
-├── app.py
-├── json_cleaner.py
-├── requirements.txt
-├── README.md
-│
-├── sample_data/
-│   ├── chat-1.json
-│   └── context-1.json
-│
-└── utils/
-    ├── embeddings.py
-    └── scoring.py
 
+### 2. Local Setup Instructions
+#### Step 1: Clone Repository
+
+git clone <repo-url>
+cd llm-eval
+
+#### Step 2: Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate
+
+#### Step 3: Install Dependencies
+pip install -r requirements.txt
+
+### 3. Running the CLI Evaluation Pipeline
+python pipeline.py --chat sample_data/chat-1.json --context sample_data/context-1.json
+
+### 4. Running the Streamlit App
+streamlit run app.py
+
+-> The app will launch at:
+http://localhost:8501
+
+### 5. Architecture Overview
+
+               +------------------+
+               |   chat.json      |
+               +--------+---------+
+                        |
+                        v
+          +-----------------------------+
+          |    json_cleaner.py         |
+          | (Extract user + assistant) |
+          +-----------------------------+
+                        |
+                        v
+               +------------------+
+               |  pipeline.py     |
+               +--------+---------+
+                        |
+              +---------+----------+
+              | Extract Context    |
+              | Embed Texts        |
+              | Compute Scores     |
+              +---------+----------+
+                        |
+                        v
+              +---------------------+
+              | Evaluation Output   |
+              +---------------------+
+
+### 6. Streamlit UI Screenshots
+Streamlit Homepage:
+
+Streamlit Evaluation Output:
