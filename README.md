@@ -20,11 +20,12 @@ The pipeline extracts the relevant messages, computes embeddings, and produces e
 A Streamlit-based UI is also included for testing and demonstration.
 
 ### 1. Project Structure
+<img src="assets/images/folder archi.png" width="700"/>
 
 ### 2. Local Setup Instructions
 #### Step 1: Clone Repository
 
-git clone <repo-url>
+git clone <https://github.com/CoderJaynt/LLM_Evaluation_Pipeline.git>
 cd llm-eval
 
 #### Step 2: Create Virtual Environment
@@ -73,5 +74,8 @@ http://localhost:8501
 
 ### 6. Streamlit UI Screenshots
 Streamlit Homepage:
+<img src="assets/images/homepage.png" width="700"/>
+
 
 Streamlit Evaluation Output:
+<img src="assets/images/output.png" width="700"/>
