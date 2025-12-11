@@ -64,7 +64,7 @@ st.sidebar.title("🔐 API Settings")
 groq_key = st.sidebar.text_input("Enter GROQ API Key", type="password", help="Required to clean chat.json using LLM")
 
 if groq_key:
-    os.environ["GROQ_API_KEY"] = groq_key
+    os.environ["GROQ_API_KEY"] = groq_key.strip()
 
 
 # ---------------- Main Screen ----------------
@@ -158,3 +158,4 @@ if run_button:
             st.markdown(f"#### 🔸 Chunk {i+1}")
             st.write(txt)
             st.write("---")
+
